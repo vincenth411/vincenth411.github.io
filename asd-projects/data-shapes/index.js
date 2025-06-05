@@ -43,9 +43,9 @@ $(document).ready(function () {
     var currentShape = dataShapes[i];
     console.log(currentShape)
     if (currentShape.color === "red"){
-
+      currentShape.goodBehavior = bounce
     }
-
+else if (currentShape.color === "blue")
      
 
     if (currentShape.color === "blue"){
@@ -59,10 +59,13 @@ $(document).ready(function () {
   // TODO 3-a: add a function that handles the static display type
 function handleStatic(data){
   setBackgroundWithObject(data)
-  animationDetails(1)
+  animationDetails.displayType = 1;
 }
   // TODO 4-a: add a function that handles the good display type
-
+  function handleGood(color, shape, repeat){
+    setBackgroundWithSimple(color, shape, repeat)
+    animationDetails.displayType = 2;
+  }
   // TODO 5-a: add a function that handles the bad display type
 
   /////////////////////////////////////////////////
@@ -71,7 +74,7 @@ function handleStatic(data){
 
   function staticDisplay() {
     // TODO 3-b: call your handleStatic function
-  }
+  } 
 ///handleStatic(dataShapes())
   function goodDisplay() {
     // TODO 4-b: call your handleGood function
