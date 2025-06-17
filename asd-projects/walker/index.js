@@ -96,7 +96,9 @@ function runProgram() {
  if (walker.y < 0) {
       walker.y -= walker.speedY;
  }
-
+    if (walker.y > $("#board").width()) {
+      walker.y -= walker.speedY ;
+    }
 
     if (walker.x > $("#board").width()) {
       walker.x -= walker.speedX ;
