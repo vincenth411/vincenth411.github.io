@@ -88,9 +88,18 @@ function runProgram() {
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
+  console.log($("#board").width)
   function wallCollision() {
     if (walker.x < 0) {
-      walker.speedX = 0;
+      walker.x -= walker.speedX;
+    }
+ if (walker.y < 0) {
+      walker.y -= walker.speedY;
+ }
+
+
+    if (walker.x > $("#board").width()) {
+      walker.x -= walker.speedX ;
     }
     // $("#board").width(0);
     // $("board").height
