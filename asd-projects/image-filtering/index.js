@@ -65,7 +65,6 @@ function keepInBounds(number){
     return number;
   }
 }
-
 // TODO 4: Create reddify filter function
 
 function reddify(pixel){
